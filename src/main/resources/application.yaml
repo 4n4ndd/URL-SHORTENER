@@ -1,3 +1,6 @@
 spring:
   application:
     name: urlShortener
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/urlshortener

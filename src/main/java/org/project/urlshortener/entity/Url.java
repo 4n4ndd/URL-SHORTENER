@@ -1,15 +1,16 @@
 package org.project.urlshortener.entity;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.annotation.processing.Generated;
 import java.time.LocalDateTime;
 
 @Document(collection = "urls")
-public class URL {
+@Data
+public class Url {
     @Id
-    private Long id;
+    private String id;
     private String originalUrl;
     private String shortCode;
     private LocalDateTime createdAt;
